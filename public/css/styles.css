@@ -1,0 +1,14 @@
+.header-image-container {
+width: 100%;
+height: 50px; 
+}
+
+.object-fit-cover {
+object-fit: cover;
+width: 100%;
+height: 100%;
+}
+
+header {
+    background-image: url('/asset/img/que son las ong.webp');
+}
