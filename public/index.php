@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="es" class="h-100">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyecto ONG</title>
-  <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body class="d-flex flex-column min-vh-100">
 
-  <?php include '../includes/header.inc.php'; ?>
+  <?php include '../backend/includes/header.inc.php'; ?>
   <main class="flex-grow-1">
 
     <h1 class="mb-4 ms-4 display-6">Bienvenido a la ONG</h1>
@@ -48,9 +38,4 @@
   </main>
 
 
-  <?php include '../includes/footer.inc.php'; ?>
-
-  <script src="js/index.js"></script>
-  <script src="dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+  <?php include '../backend/includes/footer.inc.php'; ?>

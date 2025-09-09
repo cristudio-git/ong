@@ -1,27 +1,37 @@
-const API_BASE = "http://page-ong/index.php";
+class APIs {
+    async getFromAPI(xURL, xfilter = "") {
+        try {
+            let url = xURL;
+            if (xfilter !== "") {
+                url = `${url}?filter=${encodeURIComponent(xfilter)}`;
+            }
 
-async function apiRequest(metodoEjecutar, data = {}) {
-    const res = await fetch(`${API_BASE}/${metodoEjecutar}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-    });
-    return res.json();
-}
+            const response = await fetch(url);
+            if (!response.ok) throw new Error("Error en la API");
+            return await response.json();
+        } catch (error) {
+            console.error("Error en getFromAPI:", error);
+            return [];
+        }
+    }
 
+    async call(xurl, xargs = {}, xmethod = "GET", body = false) {
+        try {
+            let options = { method: xmethod };
 
-async function getSede(filter = "") {
-    return apiRequest("get", { filter });
-}
+            if (body) {
+                options.headers = { "Content-Type": "application/json" };
+                options.body = JSON.stringify(xargs);
+            } else if (Object.keys(xargs).length > 0) {
+                xurl += "?" + new URLSearchParams(xargs).toString();
+            }
 
-async function insertSede(sede) {
-    return apiRequest("insert", sede);
-}
-
-async function updateSede(sede) {
-    return apiRequest("update", sede);
-}
-
-async function deleteSede(codSede) {
-    return apiRequest("delete", { cod_sede: codSede });
+            const response = await fetch(xurl, options);
+            if (!response.ok) throw new Error("Error en la API");
+            return await response.json();
+        } catch (error) {
+            console.error("Error en call:", error);
+            return null;
+        }
+    }
 }
