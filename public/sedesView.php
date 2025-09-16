@@ -1,12 +1,10 @@
 <?php include '../backend/includes/header.inc.php'; ?>
 
-
-<h1>Sedes de la ONG</h1>
-
-<!-- Botón para agregar una sede -->
-<button class="btn btn-primary" id="btnAgregarSede">Agregar Sede</button>
-
-<!-- Tabla de sedes -->
+  <main class="container flex-grow-1 py-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h1 class="display-6">Sedes</h1>
+      <button class="btn btn-success" id="btnAgregar">Agregar Sede</button>
+    </div>
 <table class="table table-bordered table-striped" id="tablaSedes">
     <thead>
         <tr>
@@ -47,7 +45,15 @@
                         <input type="text" class="form-control" id="telefono" required>
                     </div>
                     <div class="mb-3">
-                        <label
-
-
+                        <label>Director</label>
+                        <input type="number" class="form-control" id="cod_director" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-primary">Guardar</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
   <?php include '../backend/includes/footer.inc.php'; ?>

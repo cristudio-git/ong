@@ -1,6 +1,5 @@
 
-  <?php include '../includes/header.inc.php'; ?>
-
+<?php include '../backend/includes/header.inc.php'; ?>
   <main class="container flex-grow-1 py-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
       <h1 class="display-6">Proyectos</h1>
@@ -79,7 +78,7 @@
     </div>
   </div>
 
-  <?php include '../includes/footer.inc.php'; ?>
+  <?php include '../backend/includes/footer.inc.php'; ?>
 
 
 

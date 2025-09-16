@@ -35,3 +35,4 @@ class APIs {
         }
     }
 }
+export default APIs;

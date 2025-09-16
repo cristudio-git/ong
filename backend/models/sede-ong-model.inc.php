@@ -34,7 +34,7 @@ class SedeOngModel {
         }
 
         $aResponse["estado"] = "success";
-        $aResponse["mensaje"] = "";
+        $aResponse["mensaje"] = "Cargar Sede";
         $aResponse["datos"] = $objDB->getQuery($sql);
 
         $objDB->close();
@@ -121,7 +121,7 @@ class SedeOngModel {
         }
 
         $aResponse["estado"] = "success";
-        $aResponse["mensaje"] = "La sede se actualizo satisfactoriamente";
+        $aResponse["mensaje"] = "Actualizar sede";
         $aResponse["datos"] = $objDB->execute($sql);
         $objDB->close();
         return $aResponse;
@@ -156,7 +156,7 @@ class SedeOngModel {
         }
 
         $aResponse["estado"] = "success";
-        $aResponse["mensaje"] = "La sede se eliminó satisfactoriamente";
+        $aResponse["mensaje"] = "Eliminar sede";
         $aResponse["datos"] = $objDB->execute($sql);
 
         $objDB->close();

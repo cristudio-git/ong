@@ -18,8 +18,8 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">INICIO</a></li>
-            <li class="nav-item"><a class="nav-link active" href="sedes.php">SEDES</a></li>
-            <li class="nav-item"><a class="nav-link active" href="proyectos.php">PROYECTOS</a></li>
+            <li class="nav-item"><a class="nav-link active" href="sedesView.php">SEDES</a></li>
+            <li class="nav-item"><a class="nav-link active" href="proyectosView.php">PROYECTOS</a></li>
             <li class="nav-item"><a class="nav-link disabled" aria-disabled="true">CONTACTO</a></li>
           </ul>
         </div>
